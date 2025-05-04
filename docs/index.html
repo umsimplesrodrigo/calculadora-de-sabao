@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Sabão Caseiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calculadora de Sabão Caseiro</h1>
+
+  <label>Óleo usado (ml)
+    <input type="number" id="oleo" oninput="calcular('oleo')">
+  </label>
+
+  <label>Soda cáustica (g)
+    <input type="number" id="soda" oninput="calcular('soda')">
+  </label>
+
+  <label>Água (ml)
+    <input type="number" id="agua" oninput="calcular('agua')">
+  </label>
+  <label>Sabão em pó (g)
+    <input type="number" id="sabaoEmPo" oninout="calcular('sabaoEmPo')">
+  </label>
+  <label>Essência (ml)
+    <input type="number" id="essencia" oninout="calcular('essencia')">
+  </label>
+
+  <script src="script.js"></script>
+</body>
+</html>
