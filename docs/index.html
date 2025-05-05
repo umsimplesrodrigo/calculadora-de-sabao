@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculadora de Sabão Caseiro</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Proporções de Receita</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Calculadora de Sabão Caseiro</h1>
+  <div class="container">
+    <h1>Calculadora de Receita Caseira</h1>
 
-  <label>Óleo usado (ml)
-    <input type="number" id="oleo" oninput="calcular('oleo')">
-  </label>
+    <form id="formIngredientes">
+      <h2>Ingredientes da Receita</h2>
+      <div id="ingredientesBase">
+        <div class="ingrediente-input">
+          <input type="text" placeholder="Ingrediente (ex: Óleo)" class="nome-ingrediente" required />
+          <input type="number" placeholder="Quantidade (ex: 5)" class="quantidade-ingrediente" required />
+        </div>
+      </div>
+      <button type="button" id="addIngrediente">+ Adicionar Ingrediente</button>
+      <button type="submit">Gerar Calculadora</button>
+    </form>
 
-  <label>Soda cáustica (g)
-    <input type="number" id="soda" oninput="calcular('soda')">
-  </label>
-
-  <label>Água (ml)
-    <input type="number" id="agua" oninput="calcular('agua')">
-  </label>
-  <label>Sabão em pó (g)
-    <input type="number" id="sabaoEmPo" oninout="calcular('sabaoEmPo')">
-  </label>
-  <label>Essência (ml)
-    <input type="number" id="essencia" oninout="calcular('essencia')">
-  </label>
+    <div id="calculadora" class="oculto">
+      <h2>Calculadora de Proporções</h2>
+      <div id="inputsCalculadora"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
